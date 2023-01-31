@@ -6,4 +6,18 @@ const firebaseConfig = {
     storageBucket: "let-us-chat-44a97.appspot.com",
     messagingSenderId: "454051658818",
     appId: "1:454051658818:web:244cb9c32bce02acc981db"
-  };
+  }
+  function addRoom(){
+    var roomName = document.getElementById("room_name").value;
+    localStorage.setItem(room,roomName);
+    window.location="chat_page.js";
+  }
+  function logout(){
+    window.location = "index.html";
+  }
+  getElementById("welcome-tag").setItem="<h1 id='welcome-tag' >Welcome "+username+"!</h1>";
+  function getData(){
+    firebase.database().ref("/").on('value',function(snapshot) {document.getElementById("output").innerHTML="";snapshot.forEach(function(childSnapshot) {childKey=childShapshot.key;Room_names=childKey;row="<div class='room_name' id="+Room_names+" onclick='rediectToRoomName(this.id)'>#"+Room_names+"</div><hr>"});});}
+    function rediectToRoomName(){
+
+    }
