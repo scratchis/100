@@ -10,7 +10,16 @@ const firebaseConfig = {
   function logout(){
     window.location = "index.html";
   }
-  localStorage.getData("user_name")
-  localStorage.getData("room_name")
-  
-  var username
+  var user_name=localStorage.getData("user_name");
+  var room_name=localStorage.getData("room_name");
+  var username;
+  // user_name  room_name*//
+  function send(){
+    var message=document.getElementById("message").value;
+    firebase.database().ref(room_name).push({
+      name:user_name,
+      message:msg,
+      like:0
+    });
+    document.getElementById("message").value=0;
+  }
