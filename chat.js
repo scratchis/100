@@ -14,19 +14,12 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var username
-
-function addUser()
-{
-    username = document.getElementById("user_name").value;
-    firebase.database().ref("/").child(username).update({
-        purpose : "adding user"
-    });
-    
-    localStorage.setItem("user_name", username);
-
-    window.location = "chat_room.html";
-     set.username=getElementById("user_name").value
-    
+function addUser(){
+  username=document.getElementById("user_name").value;
+  firebase.database().getElementById("user_name").update({
+    purpose:"adding user"
+  });
+  localStorage.setItem("user_name", username);
+  window.location="chat_room.html";
+  username=getElementById("user_name").value
 }
-
-
