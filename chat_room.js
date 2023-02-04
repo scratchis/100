@@ -11,9 +11,12 @@ const firebaseConfig = {
     var roomName = document.getElementById("room_name").value;
     localStorage.setItem(room,roomName);
     window.location="chat_page.js";
+    document.getElementById.innerHTML=row;
   }
   function logout(){
     window.location = "index.html";
+    localStorage.removeItem("user_name")
+    localStorage.removeItem("room_name")
   }
   getElementById("welcome-tag").setItem="<h1 id='welcome-tag' >Welcome "+username+"!</h1>";
   function getData(){
